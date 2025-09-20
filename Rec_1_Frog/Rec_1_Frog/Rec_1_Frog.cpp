@@ -29,8 +29,6 @@ int main()
 		return 0;
 	}
 
-	int result;
-
 	amount[3] = gnats[1] + gnats[3];
 	prev_wlily[3] = 1;
 
@@ -55,9 +53,11 @@ int main()
 	std::cout << amount[n] << '\n';
 
 	std::vector<int> track;
+
 	for (int cur = n; cur != 0; cur = prev_wlily[cur]) {
 		track.push_back(cur);
 	}
+
 	std::reverse(track.begin(), track.end());
 	for (int i = 0; i < track.size(); i++) {
 		std::cout << track[i] << " ";
